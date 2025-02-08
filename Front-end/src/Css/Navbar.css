@@ -1,0 +1,306 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.navbartodo{
+    height: 100vh;
+    width: 20%;
+    background-color: rgb(49, 31, 31);
+    color: whitesmoke;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: start; */
+    /* align-items: center; */
+    gap: 20px;
+    /* justify-content: center; */
+}
+.navbartodo h1{
+    font-size: 40px;
+    padding: 15px;
+    font-family: cursive;
+    /* border: 2px solid black; */
+}
+.navbartodo h1:hover {
+    transition: all ease-in-out;
+    transform: scaleX(1.1);
+}
+.navbartodo .line{
+    width: 90%;
+    border: 1px solid rgb(158, 133, 133);
+    
+}
+.navbartodo ul{
+    text-align: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.navbartodo ul li{
+    list-style: none;
+    padding: 10px;
+}
+.navbartodo ul .searchbar {
+    display: flex;
+    width: 90%;
+    /* border: 2px solid black; */
+}
+.navbartodo ul .searchbar input{
+    width: 80%;
+    outline: none;
+
+    padding-left: 10px;
+    
+}
+.navbartodo ul .searchbar input::placeholder{
+    font-size: 12px;
+}
+.navbartodo ul .searchbar span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    font-size: 20px;
+    color: rgb(29, 189, 37);
+    cursor: pointer;
+    background-color: rgb(216, 19, 71);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.navbartodo ul .searchbar span:hover {
+    transition:all ease-in-out;
+    transform: scaleX(1.2);
+    background-color: blue;
+    color: rgb(0, 0, 0);
+}
+
+
+.navbartodo ul .home:hover{
+    background-color: blue;
+    /* width: 85%; */
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.navbartodo ul .new:hover{
+    background-color: blue;
+    /* width: 85%; */
+    border-radius: 10px;
+    cursor: pointer;
+}
+.navbartodo ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+    
+@media screen and (max-width: 768px) {
+
+    .navbarto{
+        height:10%;
+        width: 100%;
+        background-color: rgb(49, 31, 31);
+        color: whitesmoke;
+        border: 2px solid black;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+        /* justify-content: space-between; */
+    }
+    .navbarto h1{
+        font-size: 17px;
+        padding: 0px;
+    }
+    .navbarto .lineto{
+       display: none;
+    }
+    .navbarto ul {
+        width: 70%;
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 0px;
+        /* justify-content: space-around; */
+        /* border: 2px solid white; */
+        /* overflow: hidden; */
+        padding: 0px;
+        margin-top: 10px;
+    }
+
+    .navbarto ul li{
+        list-style: none;
+        /* padding: 10px; */
+        padding: 5px;
+        
+    }
+    .navbarto ul .searchbarto {
+        height: 80%;
+        width: 50%;
+        /* width: 90%; */
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        /* border: 2px solid black; */
+    }
+    .navbarto ul .searchbarto input{
+        /* width: 80%; */
+        outline: none;
+    /* padding: 16px; */
+        /* padding-left: 10px; */
+        
+    }
+    .navbartodo ul .searchbar input::placeholder{
+        font-size: 12px;
+    }
+    .navbartodo ul .searchbar span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* width: 20%; */
+        font-size: 20px;
+        color: rgb(29, 189, 37);
+        cursor: pointer;
+        background-color: rgb(216, 19, 71);
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .navbartodo ul .searchbar span:hover {
+        transition:all ease-in-out;
+        transform: scaleX(1.2);
+        background-color: blue;
+        color: rgb(0, 0, 0);
+    }
+    .navbartodo ul .home{
+        font-size: 13px;
+        /* width: 30%; */
+    }
+    .navbartodo ul .new{
+        font-size: 13px;
+        /* width: 20%; */
+    }
+    
+    .navbartodo ul .home:hover{
+        background-color: blue;
+        /* width: 85%; */
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    
+    .navbartodo ul .new:hover{
+        background-color: blue;
+        /* width: 85%; */
+        border-radius: 10px;
+        cursor: pointer;
+    }
+  
+}
+
+
+
+@media screen and (max-width: 420px) {
+
+    .navbarto{
+        height:10%;
+        width: 100%;
+        justify-content: space-around;
+        gap: 0px;
+        /* justify-content: space-between; */
+    }
+    .navbarto h1{
+        font-size: 12px;
+        padding: 0px;
+    }
+    .navbarto .lineto{
+       display: none;
+    }
+    .navbarto ul {
+        justify-content: space-between;
+        gap: 0px;
+        /* justify-content: space-around; */
+    
+        /* overflow: hidden; */
+        padding: 0px;
+        margin-top: 10px;
+    }
+
+    .navbarto ul li{
+        list-style: none;
+        /* padding: 10px; */
+        padding: 2px;
+        
+    }
+    .navbarto ul .searchbarto {
+        height: 50%;
+        width: 50%;
+        /* width: 90%; */
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        /* border: 2px solid black; */
+    }
+    .navbarto ul .searchbarto input{
+        /* width: 80%; */
+        outline: none;
+    /* padding: 16px; */
+    padding: 0px;
+    font-size: 12px;
+    /* text-align: center; */
+        /* padding-left: 10px; */
+        
+    }
+    .navbartodo ul .searchbar input::placeholder{
+        font-size: 8px;
+    }
+    .navbartodo ul .searchbar span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* width: 20%; */
+        font-size: 15px;
+        color: rgb(29, 189, 37);
+        cursor: pointer;
+        background-color: rgb(216, 19, 71);
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .navbartodo ul .searchbar span:hover {
+        transition:all ease-in-out;
+        transform: scaleX(1.2);
+        background-color: blue;
+        color: rgb(0, 0, 0);
+    }
+    .navbartodo ul .home{
+        font-size: 12px;
+        /* width: 30%; */
+        padding: 2px;
+    }
+    .navbartodo ul .new{
+        font-size: 12px;
+        padding: 2px;
+        /* width: 20%; */
+    }
+    
+    .navbartodo ul .home:hover{
+        background-color: blue;
+        /* width: 85%; */
+        padding: 2px;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+    
+    .navbartodo ul .new:hover{
+        background-color: blue;
+        /* width: 85%; */
+        border-radius: 2px;
+        padding: 2px;
+        cursor: pointer;
+    }
+  
+}
