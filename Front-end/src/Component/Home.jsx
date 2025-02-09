@@ -5,30 +5,7 @@ export default function Home() {
   return (
     <div  className='homepage'  >
       <CardData/>
-      <CardData/>
-      <CardData/>
-      <CardData/>
-      <CardData/>
-      <CardData/>
-      <CardData/>
-      <CardData/>
-      <CardData/>
-      <CardData/>
-      <CardData/>
-      <CardData/>
-      <CardData/>
-      <CardData/>
-      <CardData/>
-      <CardData/>
-      <CardData/>
-      <CardData/>
-      <CardData/>
-      <CardData/>
-      <CardData/>
-      <CardData/>
-      <CardData/>
-      <CardData/>
-      <CardData/>
+     
     </div>
   )
 }

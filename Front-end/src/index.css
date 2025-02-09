@@ -7,14 +7,14 @@
 
 .layoutOutlet{
     height:"100vh"; width:"80%";
-    overflow: scroll;
+    /* overflow: scroll; */
     
 }
 .homepage{
     display: flex;
     flex-wrap: wrap;height: 100vh;
-    width: 80%;
-    overflow: scroll;
+    width: 100%;
+    /* overflow: scroll; */
 }
 @media screen and (max-width: 768px) {
     .layoutnav{
@@ -23,7 +23,8 @@
     }
     .homepage{
         display: flex;
-        flex-wrap: wrap;height: 80%;
+        flex-wrap: wrap;
+        height: 80%;
         width: 100%;
         background-color: blueviolet;
     }

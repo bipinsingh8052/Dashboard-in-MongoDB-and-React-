@@ -1,6 +1,42 @@
-.name, .employeeid , .Role ,.Salary ,.joing ,.btnAll{
+.name, .employeeid , .Role ,.Salary ,.joing {
     display: flex;
     justify-content: center;
     align-items: center;
     justify-content: space-between;
+   
+}
+.name h5, .employeeid h5 ,.Role h5 , .Salary h5 , .joing h5{
+    font-size: 20px;
+    font-weight:400;
+}
+
+.btnAll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.btnAll .btnfirst{
+    color: blueviolet;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.btnAll .btnfirst:hover{
+    color: rgb(50, 186, 12);
+}
+.btnAll .btnsecond{
+    color: rgb(198, 21, 53);
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.btnAll .btnsecond:hover{
+    color: rgb(27, 149, 219);
 }

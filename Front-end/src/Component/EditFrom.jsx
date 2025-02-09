@@ -1,65 +1,49 @@
 import React, { useState } from 'react'
 import '../Css/From.css'
-import axios from 'axios'
-import {message} from 'antd'
 export default function FromComponent() {
   let[input,setinput]=useState({})
-  const Handleinsert=(e)=>{
+  const Handleupdate=(e)=>{
     let {name,value}=e.target;
     setinput(values=>({...values,[name]:value}))
-  }
-  message.success("data")
-  const Checkit=()=>{
-    console.log(input)
   }
 
 
   const submitdata=(e)=>{
     e.preventDefault();
-    let api ="http://localhost:9000/EmployeeData/insert"
-    axios.post(api,input)
-    .then(res=>{
-      console.log(res.data.msg);
-   
-    })
-    .catch(()=>{
-      console.log("not work")
-    })
   }
   return (
     <div style={{backgroundColor:"red", width:"100%", display:"flex", alignItems:"center", justifyContent:"center"
     }}>
       <form onSubmit={submitdata} >
 
-        <h1>Insert the New Employee Details</h1>
+        <h1>Update Employee Details</h1>
 
      <div className="empname">
      <label htmlFor="name">Enter the name</label>
-     <input type="text" name='Empname'  onChange={Handleinsert} />
+     <input type="text" name='Empname'  onChange={Handleupdate} />
      </div>
      <div className="empimg">
      <label htmlFor="name">Enter the Img Url</label>
-     <input type="text" name='Empurl'  onChange={Handleinsert} />
+     <input type="text" name='Empurl'  onChange={Handleupdate} />
      </div>
-
      <div className="empid">
       <label htmlFor="Empid"> Enter the Employee ID</label>
-      <input type="text" name='Empid' onChange={Handleinsert} />
+      <input type="text" name='Empid' onChange={Handleupdate} />
      </div>
      <div className="Emprole">
       <label htmlFor="emprole">Enter the Employee Role</label>
-      <input type="text" name='emprole' onChange={Handleinsert} />
+      <input type="text" name='emprole' onChange={Handleupdate} />
      </div>
      <div className="empsalary">
       <label htmlFor="salary">Enter the Salary</label>
-      <input type="no" name='empsalary' onChange={Handleinsert}  />
+      <input type="no" name='empsalary' onChange={Handleupdate}  />
      </div>
      <div className="empjoing">
       <label htmlFor="empjoing">Enter the Joing Date</label>
-      <input type="date" name='empjoing' onChange={Handleinsert} />
+      <input type="date" name='empjoing' onChange={Handleupdate} />
      </div>
      <div className="empbtn">
-      <button type='submit' onClick={Checkit}>Submit</button>
+      <button type='submit'>Submit</button>
      </div>
       </form>
     </div>
