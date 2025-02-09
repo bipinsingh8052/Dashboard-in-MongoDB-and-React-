@@ -2,20 +2,28 @@
 import { IoSearch } from "react-icons/io5";
 import '../Css/Navbar.css'
 import { Link } from 'react-router-dom';
-import { useState } from "react";
+import {  useState } from "react";
 import axios from "axios"
+
+
+
 export default function Nvabruoo() {
   let [search,set_Search]=useState("");
+  
+  let [search_Data,set_search_Data]=useState([]);
   const Search =()=>{
     console.log(search)
     let api ="http://localhost:9000/EmployeeData/Search";
     axios.post(api,{name:search}).then(res=>{
-      console.log(res.data);
+      // console.log(res.data);
+      set_search_Data(res.data)
     })
     .catch(()=>{
       console.log("error")
     })
   }
+
+
   return (
    <>
 
@@ -29,7 +37,12 @@ export default function Nvabruoo() {
 
       </ul>
    </nav>
+
+  
+ 
+   
    </>
 
   )
 }
+

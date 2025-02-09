@@ -6,9 +6,31 @@ import { FaUserEdit } from "react-icons/fa";
 import axios from 'axios'
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+// import Store from '../Store';
 
 export default function CardData() {
   let[allData,setAllData]=useState([])
+
+
+
+  // let [nowsearch,setnow_search]=useReducer(myReducer,true)
+
+  
+  // reducer
+  // const myReducer=(state,actions)=>{
+  //   switch(actions){
+  //     case "not":
+  //     return state=false;
+
+  //     case "yes":
+  //       return state=true;
+  //       default:
+  //         return state;
+
+  //   }
+
+  // }
+  // reducer
   const loading=()=>{
     let api ="http://localhost:9000/EmployeeData/home"
     axios.get(api).then(res=>{
@@ -46,7 +68,9 @@ export default function CardData() {
     loading();
   },[])
   return (
+
     <div style={{display:"flex", flexWrap:"wrap", alignItems:"center", justifyContent:"center"}}>
+      
       {
         allData.map((e,index)=>{return(
           <Card style={{ width: '18rem',  margin:'10px', padding:"5tpx"}} key={index}>
