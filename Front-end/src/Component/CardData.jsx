@@ -5,6 +5,7 @@ import { RiDeleteBin5Line } from "react-icons/ri";
 import { FaUserEdit } from "react-icons/fa";
 import axios from 'axios'
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function CardData() {
   let[allData,setAllData]=useState([])
@@ -34,8 +35,11 @@ export default function CardData() {
 
 
   // edit
+  let nav=useNavigate()
   const myedit=(id)=>{
     console.log(id)
+    nav(`/edit/${id}`)
+
   } 
   // edit
   useEffect(()=>{
