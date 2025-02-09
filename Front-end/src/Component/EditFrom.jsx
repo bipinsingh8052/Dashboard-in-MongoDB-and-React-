@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import '../Css/From.css'
 import axios from 'axios'
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 export default function FromComponent() {
   let[input,setinput]=useState({})
   const Handleupdate=(e)=>{
@@ -26,8 +26,18 @@ const Checkit=()=>{
     
 }
 
+let nav=useNavigate();
   const submitdata=(e)=>{
     e.preventDefault();
+    let api ="http://localhost:9000/EmployeeData/editupdate";
+    axios.post(api,input).then(res=>{
+        console.log(res.data.msg);
+    })
+    .catch(()=>{
+        console.log("error")
+    })
+    nav("/home")
+
   }
   useEffect(()=>{
     loading()
