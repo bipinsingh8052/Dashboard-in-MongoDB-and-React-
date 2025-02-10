@@ -43,7 +43,7 @@ let nav=useNavigate();
     loading()
   },[])
   return (
-    <div style={{backgroundColor:"red", width:"100%", display:"flex", alignItems:"center", justifyContent:"center"
+    <div style={{backgroundColor:"whitesmoke", width:"100%", display:"flex", alignItems:"center", justifyContent:"center"
     }}>
       <form onSubmit={submitdata} >
 
