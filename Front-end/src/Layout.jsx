@@ -6,8 +6,7 @@ export default function Layout() {
   return (
     <div   className='layoutnav'>
      <Nvabruoo  className='Nvabruoo' />
-     <main  className='layoutOutlet' style={{ height:"100vh", width:"80%", overflow:"scroll"
-     }} >
+     <main  className='layoutOutlet'>
         <Outlet/>
      </main>
     </div>

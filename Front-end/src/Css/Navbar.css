@@ -141,7 +141,7 @@
         
     }
     .navbarto ul .searchbarto {
-        height: 80%;
+        height: 90%;
         width: 50%;
         /* width: 90%; */
         display: flex;
@@ -236,16 +236,16 @@
         padding: 2px;
         
     }
-    .navbarto ul .searchbarto {
-        height: 50%;
+    .navbarto ul .searchbar {
+        height: 80%;
         width: 50%;
         /* width: 90%; */
         display: flex;
         justify-content: center;
         /* align-items: center; */
-        /* border: 2px solid black; */
+        /* border: 2px solid rgb(199, 174, 174); */
     }
-    .navbarto ul .searchbarto input{
+    .navbarto ul .searchbar input{
         /* width: 80%; */
         outline: none;
     /* padding: 16px; */

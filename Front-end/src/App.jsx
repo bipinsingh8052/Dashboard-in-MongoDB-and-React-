@@ -6,6 +6,7 @@ import Nvabruoo from "./pages/Nvabruoo"
 
 import EditFrom from './Component/EditFrom'
 import {BrowserRouter, Routes ,Route} from 'react-router-dom'
+import Search from "./Component/Search"
 function App() {
   
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="home" element={<Home/>} />
         <Route path="new" element={<FromComponent/>}/>
         <Route path="/edit/:id" element={<EditFrom/>}/>
+        <Route path="/search" element={<Search/>} />
         </Route>
       </Routes>
     </BrowserRouter>

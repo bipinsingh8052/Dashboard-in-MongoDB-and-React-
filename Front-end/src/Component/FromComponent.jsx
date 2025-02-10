@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import '../Css/From.css'
 import axios from 'axios'
 import {message} from 'antd'
+import { useNavigate } from 'react-router-dom'
 export default function FromComponent() {
   let[input,setinput]=useState({})
   const Handleinsert=(e)=>{
@@ -13,7 +14,7 @@ export default function FromComponent() {
     console.log(input)
   }
 
-
+const nav =useNavigate()
   const submitdata=(e)=>{
     e.preventDefault();
     let api ="http://localhost:9000/EmployeeData/insert"
@@ -25,9 +26,10 @@ export default function FromComponent() {
     .catch(()=>{
       console.log("not work")
     })
+    nav("/home")
   }
   return (
-    <div style={{backgroundColor:"red", width:"100%", display:"flex", alignItems:"center", justifyContent:"center"
+    <div style={{ width:"100%", display:"flex", alignItems:"center", justifyContent:"center"
     }}>
       <form onSubmit={submitdata} >
 

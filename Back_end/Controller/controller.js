@@ -26,16 +26,40 @@ const DeletePage=async(req,res)=>{
     res.send({msg:"Deleted Employee Details.."})
 }
 
-const updatepage=async(req,res)=>{
-    res.send("update")
+
+const SearchPage=async(req,res)=>{
+    // console.log(req.body)
+    const{ name}=req.body;
+    const data =await ModulEmp.find({Empname:name})
+    // const newd
+    console.log(data)
+        res.send(data);
+  
+    // .catch(()=>{
+    //     res.send({msg:"Not Found"})
+    // })
+    
 }
-const searchPage=async(req,res)=>{
-    res.send("search");
+
+
+
+const EditSearch=async(req,res)=>{
+    // console.log(req.body);
+    const { id}=req.body
+    const data= await ModulEmp.findById(id);
+    res.send(data)
+}
+const EditUpdate=async(req,res)=>{
+    console.log(req.body);
+    const { _id}=req.body;
+    const data= await ModulEmp.findByIdAndUpdate(_id,req.body)
+    res.send({msg:"Employee Detaile is Updated..."})
 }
 module.exports={
     HomePage,
     InsertPage,
     DeletePage,
-    updatepage,
-    searchPage
+    SearchPage,
+    EditSearch,
+    EditUpdate
 }

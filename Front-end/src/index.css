@@ -16,24 +16,37 @@
     width: 100%;
     /* overflow: scroll; */
 }
-@media screen and (max-width: 768px) {
-    .layoutnav{
-        display: flex;
-        flex-direction: column;
+
+
+.layoutnav {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  .Nvabruoo {
+    width: 20%;  /* Sidebar width on desktop */
+    background-color: #2c2c2c;
+    color: white;
+  }
+  
+  .layoutOutlet {
+    width: 80%;
+    height: 100vh;
+    overflow: auto;
+    background-color: #f5f5f5;
+  }
+  
+  /* ✅ Responsive Design for Mobile */
+  @media (max-width: 768px) {
+    .layoutnav {
+      flex-direction: column;
     }
-    .homepage{
-        display: flex;
-        flex-wrap: wrap;
-        height: 80%;
-        width: 100%;
-        background-color: blueviolet;
+    
+    .Nvabruoo, .layoutOutlet {
+      width: 100%;
+      /* height: auto; */
     }
-    .layoutOutlet{
-        height:"100vh"; width:"80%";
-        /* overflow: scroll; */
-        overflow: visible;
-        display: flex;
-        flex-direction: column;
-    }
-}
+  }
+
 
